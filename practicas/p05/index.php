@@ -118,6 +118,23 @@
         echo "\$c = $c<br>";
     ?>
 
+    <h2>Ejercicio 6</h2>
+    <?php
+        $a = 0;
+        $b = 1;
+        $c = -2;
+        $d = "";
+        $e = "Hola";
+        $f = null;
+
+        var_dump($a); echo "<br>";
+        var_dump($b); echo "<br>";
+        var_dump($c); echo "<br>";
+        var_dump($d); echo "<br>";
+        var_dump($e); echo "<br>";
+        var_dump($f); echo "<br>";
+    ?>
+
 
     
 </body>
