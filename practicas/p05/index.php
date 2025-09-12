@@ -78,6 +78,34 @@
         echo "\$z[0] = $z[0]<br>";
         echo "\$a = $a<br>";
     ?>
+
+    <h2>Ejercicio 4</h2>
+    <?php
+        $a = "PHP5"; // 1
+        echo "\$a = " . $GLOBALS['a'] . "<br>";
+
+        $z[] = &$a; // 2
+        echo "\$z = ";
+        print_r($GLOBALS['z']);
+        echo "<br>";
+
+        $b = "5a version de PHP"; // 3
+        echo "\$b = " . $GLOBALS['b'] . "<br>";
+
+        $c = $GLOBALS['b'] * 10; // 4
+        echo "\$c = " . $GLOBALS['c'] . "<br>";
+
+        $GLOBALS['a'] .= $GLOBALS['b']; // 5
+        echo "\$a = " . $GLOBALS['a'] . "<br>";
+
+        $GLOBALS['b'] *= $GLOBALS['c']; // 6
+        echo "\$b = " . $GLOBALS['b'] . "<br>";
+
+        $GLOBALS['z'][0] = "MySQL"; // 7
+        echo "\$z[0] = " . $GLOBALS['z'][0] . "<br>";
+        echo "\$a = " . $GLOBALS['a'] . "<br>";
+    ?>
+
     
 </body>
 </html>
