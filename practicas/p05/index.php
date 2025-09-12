@@ -31,6 +31,31 @@
         echo '</ul>';
     ?>
 
+    <h2>Ejercicio 2</h2>
+    <?php
+    $a = "ManejadorSQL";
+    $b = "MySQL";
+    $c = &$a; // c referencia a a
+
+    echo "<strong>Bloque 1:</strong><br>";
+    echo "a = $a<br>";
+    echo "b = $b<br>";
+    echo "c = $c<br>";
+
+    echo "<br>";
+
+    // reasignamos
+    $a = "PHP server";
+    $b = &$a; // ahora b referencia a a también
+
+    echo "<strong>Bloque 2 (después de cambios):</strong><br>";
+    echo "a = $a<br>";
+    echo "b = $b<br>";
+    echo "c = $c<br>";
+
+    ?>
+
+
     
 </body>
 </html>
