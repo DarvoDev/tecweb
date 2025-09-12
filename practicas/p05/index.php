@@ -106,6 +106,19 @@
         echo "\$a = " . $GLOBALS['a'] . "<br>";
     ?>
 
+    <h2>Ejercicio 5</h2>
+    <?php
+        $a = "7 personas";
+        echo "\$a = $a<br>";
+        $b = (integer) $a;  
+        echo "\$b = $b<br>";
+        $a = "9E3";
+        echo "\$a = $a<br>";
+        $c = (double) $a;   
+        echo "\$c = $c<br>";
+    ?>
+
+
     
 </body>
 </html>
