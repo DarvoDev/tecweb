@@ -55,7 +55,29 @@
 
     ?>
 
+    <h2>Ejercicio 3</h2>
+    <?php
+        $a = "PHP5"; // 1
+        echo "\$a = $a<br>";
+        $z[] = &$a; // 2
+        echo "\$z = ";
+        print_r($z);
+        echo "<br>";
+        $b = "5a version de PHP"; // 3
+        echo "\$b = $b<br>";
+        $c = $b*10; // 4
+        echo "\$c = $c<br>";
 
+        $a .= $b; // 5
+        echo "\$a = $a<br>";
+
+        $b *= $c; // 6
+        echo "\$b = $b<br>";
+
+        $z[0] = "MySQL"; // 7
+        echo "\$z[0] = $z[0]<br>";
+        echo "\$a = $a<br>";
+    ?>
     
 </body>
 </html>
