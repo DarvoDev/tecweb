@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <title>ProductApp</title>
+    <link rel="stylesheet" href="https://bootswatch.com/4/superhero/bootstrap.min.css">
+    <style>
+      .validation-message {
+        font-size: 0.875rem;
+        margin-top: 0.25rem;
+      }
+      .validation-message.valid {
+        color: #28a745;
+      }
+      .validation-message.invalid {
+        color: #dc3545;
+      }
+      .form-control.is-valid {
+        border-color: #28a745;
+      }
+      .form-control.is-invalid {
+        border-color: #dc3545;
+      }
+    </style>
+  </head>
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href=".">ProductApp</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto"></ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" name="search" id="search" type="search" placeholder="ID, marca o descripción" aria-label="Search">
+            <button class="btn btn-success my-2 my-sm-0" type="submit">Buscar</button>
+          </form>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row p-4">
+        <div class="col-md-5">
+          <div class="card">
+            <div class="card-body">
+              <form id="product-form">
+                <div class="form-group">
+                  <label for="name">Nombre del Producto *</label>
+                  <input class="form-control" type="text" id="name" placeholder="Nombre del producto" maxlength="100" required>
+                  <div id="name-validation" class="validation-message"></div>
+                </div>
+
+                <div class="form-group">
+                  <label for="marca">Marca *</label>
+                  <input class="form-control" type="text" id="marca" placeholder="Marca del producto" required>
+                  <div id="marca-validation" class="validation-message"></div>
+                </div>
+
+                <div class="form-group">
+                  <label for="modelo">Modelo *</label>
+                  <input class="form-control" type="text" id="modelo" placeholder="Ej: XX-000" maxlength="25" required>
+                  <div id="modelo-validation" class="validation-message"></div>
+                </div>
+
+                <div class="form-group">
+                  <label for="precio">Precio *</label>
+                  <input class="form-control" type="number" id="precio" placeholder="Mayor a 99.99" step="0.01" min="0" required>
+                  <div id="precio-validation" class="validation-message"></div>
+                </div>
+
+                <div class="form-group">
+                  <label for="unidades">Unidades *</label>
+                  <input class="form-control" type="number" id="unidades" placeholder="Número de unidades" min="0" value="1" required>
+                  <div id="unidades-validation" class="validation-message"></div>
+                </div>
+
+                <div class="form-group">
+                  <label for="detalles">Detalles</label>
+                  <textarea class="form-control" id="detalles" rows="3" placeholder="Detalles del producto (opcional)" maxlength="250"></textarea>
+                  <div id="detalles-validation" class="validation-message"></div>
+                </div>
+
+                <div class="form-group">
+                  <label for="imagen">Ruta de Imagen</label>
+                  <input class="form-control" type="text" id="imagen" placeholder="img/producto.png" value="img/default.png">
+                  <div id="imagen-validation" class="validation-message"></div>
+                </div>
+
+                <input type="hidden" id="productId">
+                <button class="btn btn-primary btn-block text-center" type="submit">
+                  Agregar Producto
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-7">
+          <div class="card my-4" id="product-result" style="display: none;">
+            <div class="card-body">
+              <ul id="container"></ul>
+            </div>
+          </div>
+
+          <table class="table table-bordered table-sm">
+            <thead>
+              <tr>
+                <td>Id</td>
+                <td>Nombre</td>
+                <td>Descripción</td>
+                <td>Acciones</td>
+              </tr>
+            </thead>
+            <tbody id="products"></tbody>
+          </table>  
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
