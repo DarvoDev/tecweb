@@ -1,0 +1,10 @@
+{
+    "name": "tecweb/myapi",
+    "description": "API de Productos con arquitectura PSR-4",
+    "autoload": {
+        "psr-4": {
+            "TECWEB\\MYAPI\\": "myapi/"
+        }
+    },
+    "require": {}
+}
